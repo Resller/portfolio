@@ -56,7 +56,7 @@ type buttonProps = {
     bgGradientBeforePrimary : string
     bgGradientBeforeSecondary:string,
     bgBefore:string,
-    loading:boolean
+    sendLoading:boolean
 }
 export const Button = styled.button<buttonProps>`
     width:120px;
@@ -104,7 +104,7 @@ export const Button = styled.button<buttonProps>`
         cursor: pointer;
         fill: ${props=>props.color};
         z-index:999;
-        animation:${props=>props.loading?' rotate 1s linear infinite':'none'};
+        animation:${ props=> props.sendLoading ? ' rotate 1s linear infinite':'none'};
     }
     @keyframes rotate {
         0% {

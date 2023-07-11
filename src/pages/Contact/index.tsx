@@ -19,6 +19,7 @@ export const Contact = ()=>{
     
     const {state} = useContext(Context);
     const desc ="Estou entusiasmado e disponível para abraçar novas oportunidades profissionais. Convido você a entrar em contato comigo por e-mail ou telefone, para explorarmos juntos as inúmeras possibilidades de colaboração e construção de projetos de sucesso."
+    
     return(
         < C.Container>
             <C.AreaContainer>

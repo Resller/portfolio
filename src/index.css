@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family= Poppins :wght@400;600;700 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 *{
   padding: 0;
@@ -6,36 +6,4 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   color: #FFF;
-}
-
-.copy::before:hover{
-    position: relative;
-    width: calc();
-    align-items: center;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    text-decoration: none;
-    background: transparent;
-    color: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFF;
-
-
-   transition:  all .4s;
-    position: relative;
-    object-fit: cover;
-    
-    object-fit: fill;
-   cursor: pointer;
-
-    transition: all ease-in-out .4s;
-}
-
-
-
-@media(max-width:1000px){
-  
 }

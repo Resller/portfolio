@@ -16,15 +16,16 @@ export const FormContact = ()=>{
     const [name,setName] = useState('');
     const [email,setEmail] = useState('');
     const [message,setMessage] = useState('');
+
     const [txtModal,setTxtModal]= useState<string>('')
-    const [loading,setLoading] = useState<boolean>(false);
+    const [sendLoading,setSendLoading] = useState<boolean>(false);
     const [sendSuccess,setSendSuccess] = useState <boolean>(false);
     const [modal,setModal] = useState <boolean>(false)
     const [iconModal,setIconModal] = useState<JSX.Element>(<FaRegCheckCircle/>)
 
     const handleForm = async (e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
-        setLoading(true)
+        setSendLoading(true)
         let response = await sendMessage(name,email,message);
         if(response.status === 200){
                 setName('');
@@ -39,7 +40,7 @@ export const FormContact = ()=>{
             setSendSuccess(false)
         }
 
-        setLoading(false)
+        setSendLoading(false)
         setModal (true)
         setTimeout(()=>{
             setModal(false)
@@ -96,9 +97,9 @@ export const FormContact = ()=>{
                         bgGradientBeforePrimary = {state.theme.bgGradientBeforePrimary}
                         bgGradientBeforeSecondary = {state.theme.bgGradientBeforeSecondary}
                         bgBefore= {state.theme.bgBeforeButton}
-                        loading = {loading}
+                        sendLoading = {sendLoading}
                     >
-                       <span>Enviar </span> {loading && <FaHistory/> } {!loading && <IoSend/> } 
+                       <span>Enviar </span> {sendLoading && <FaHistory/> } {!sendLoading && <IoSend/> } 
                     </C.Button>
                     {modal &&
                         <C.AreaModal   modal = {modal}>

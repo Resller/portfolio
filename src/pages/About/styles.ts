@@ -72,7 +72,7 @@ export const TitleSmall = styled.h2<{colorHighlight:string}>`
     }
    
 `
-export const AreaDescription = styled.p`
+export const AreaDescription = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
