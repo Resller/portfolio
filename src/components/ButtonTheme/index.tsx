@@ -26,7 +26,7 @@ export const ButtonTheme = () => {
   }
 
   return (
-    <C.Container 
+    <C.ContainerButton 
         onClick={ handleClick }
         colorTextPrimary = {state.theme.colorTextSecondary}
         colorShadowPrimary = {state.theme.colorShadowPrimary}
@@ -39,6 +39,6 @@ export const ButtonTheme = () => {
     >
         <FaMoon className='moon'/>
         <FaSun className='sun'/>
-    </C.Container>
+    </C.ContainerButton >
   )
 }

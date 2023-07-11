@@ -15,6 +15,7 @@ export type typeThemeInitialState = {
     colorHighlight :string,
     colorTextBelow : string,
     colorTextHover : string,
+    colorButtonHover:string,
     colorTextLabel : string,
     colorShadowPrimary:string,
     colorShadowSecondary:string,

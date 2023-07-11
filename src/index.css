@@ -9,9 +9,32 @@
 }
 
 .copy::before:hover{
-    position: initial;
+    position: relative;
     width: calc();
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    text-decoration: none;
+    background: transparent;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+
+
+   transition:  all .4s;
+    position: relative;
+    object-fit: cover;
+    
+    object-fit: fill;
+   cursor: pointer;
+
+    transition: all ease-in-out .4s;
 }
+
+
 
 @media(max-width:1000px){
   

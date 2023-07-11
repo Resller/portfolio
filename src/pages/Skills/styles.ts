@@ -16,12 +16,14 @@ export const AreaContainer = styled.div`
 
     .right{
         flex:1;
+        padding:0 20px ;
     }
     
     .left{
         width:100%;
         display: flex;
         justify-content: center;
+       
     }
 
     @media(max-width:1000px){
@@ -45,10 +47,7 @@ export const TitleBig = styled.h1<{colorTextBelow:string}>`
     @media(max-width:600px){
         font-size:50px;
     }
-    @media(max-width:400px){
-        font-size:38px;
-    }
-    @media(max-width:319px){
+    @media(max-width:600px){
         display:none;
     }
 

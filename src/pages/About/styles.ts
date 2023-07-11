@@ -48,7 +48,7 @@ export const AreaTitle = styled.div`
 
 `
 export const TitleBig = styled.h1<{colorTextBelow:string}>`
-    font-size:60px;
+    font-size:50px;
     margin-bottom:20px;
     color:${props=> props.colorTextBelow};
     position: absolute;
@@ -59,9 +59,12 @@ export const TitleBig = styled.h1<{colorTextBelow:string}>`
     @media(max-width:600px){
         font-size:50px;
     }
+    @media(max-width:600px){
+        display:none;
+    }
 `
 export const TitleSmall = styled.h2<{colorHighlight:string}>`
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
     color:${props=> props.colorHighlight};
     @media(max-width:600px){

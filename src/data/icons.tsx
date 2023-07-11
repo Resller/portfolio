@@ -1,4 +1,4 @@
-import { ListIconSkillsTypes, ListIconSocialTypes } from '../types/mainTypes'
+import { ListCategoriesProjectsTypes, ListIconSkillsTypes, ListIconSocialTypes } from '../types/mainTypes'
 
 import html5Css3Icon from '../img/html5-e-css3.jpg'
 import javascriptIcon from '../img/javascript.jpg'
@@ -22,6 +22,11 @@ export const listIconSocial:ListIconSocialTypes[] = [
     {link:'https://www.linkedin.com/in/resller/', iconSvg:<FaLinkedinIn/>},
     {link:'https://www.github.com/Resller', iconSvg:<FaGithub/>},
     {link:'https://api.whatsapp.com/send?phone=15997892091', iconSvg:<FaWhatsapp/>}   
+]
+
+export const ListCategoriesProjects : ListCategoriesProjectsTypes[] = [
+    {title: 'React', icon: reactjsIcon},
+    {title: 'Javascript', icon: javascriptIcon}
 ]
 
 

@@ -3,51 +3,55 @@ import styled from "styled-components";
 export const Container = styled.div`
     flex:1;
     display: flex;
-`
 
+`
 export const AreaContainer = styled.div`
     flex:1;
     max-width:1024px;
     margin:0 auto;
+    padding:30xp 0 ;
     display: flex;
-    padding:30px 0;
+    flex-direction: column;
     overflow: hidden;
-
-    .left{
-        flex:1;
-    }
+    
     .right{
         flex:1;
     }
+    .left{
+        width:100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
     @media(max-width:1000px){
-        flex-direction: column-reverse;
-        gap:40px;
-        padding-top:0px;
-        padding-bottom: 40px;
+      
     }
 `
-export const AreaTitleSkills = styled.div`
-    position:relative;
-    margin-top:-38px;
-`
-export const TitleBig = styled.h1<{colorTextBelow:string}>`
-    font-size:5vw;
-    margin-bottom:20px;
-    color:${props=> props.colorTextBelow};
-    position: absolute;
-    top: 0px;
-    left: 0;
-    z-index: -1;
-    font-weight: 900;
-`
-export const TitleSmall = styled.h2<{colorHighlight:string}>`
-    font-size: 50px;
-    font-weight: 700;
-    color:${props=> props.colorHighlight};
-   
+export const AreaBar = styled.div`
+    @media (max-width: 1100px) {
+        padding-top: 30px;
+    }
 `
 
-export const AreaSkills = styled.div`
+export const AreaModal = styled.div <{modal:boolean}>`
+    content: "";
+    z-index: 9999;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: opacity 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+
+  opacity: ${(props) => (props.modal ? 1 : 0)};
+  pointer-events: ${(props) => (props.modal ? 'auto' : 'none')};
 
 `
