@@ -1,9 +1,9 @@
 import * as C from  './styles';
 
-import { useContext} from 'react';
+import { useContext, useRef} from 'react';
 import { Context } from '../../context/Context';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import {EffectCreative ,Pagination, Autoplay} from 'swiper/modules';
 
 import 'swiper/css';
@@ -18,10 +18,14 @@ type props = {
 
 export const SlideModal =({data,title}:props)=> {
     const {state} = useContext(Context);
+    
+    const swiperRef = useRef<SwiperRef>(null);
+    const swiperApi = swiperRef.current?.swiper;
 
     return (
         <C.Container>
             <Swiper
+                ref={swiperRef}
                 effect={'creative'}
                 loop= {true}
                 autoplay={{

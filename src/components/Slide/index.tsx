@@ -1,9 +1,9 @@
 import * as C from  './styles';
 
-import { useContext, useState,  useEffect} from 'react';
+import { useContext, useState,  useEffect, useRef} from 'react';
 import { Context } from '../../context/Context';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import { EffectCoverflow ,Pagination, Navigation} from 'swiper/modules';
 
 import {FaArrowCircleRight, FaArrowCircleLeft , FaArrowUp } from "react-icons/fa";
@@ -29,6 +29,9 @@ export const Slide =({card, setCard, setModal, setProjectModal}:props)=> {
     const [listProjects,setListProjects] = useState<listProjectsTypes[]>(listProjectsReact);
     const [activeSlide, setActiveSlide] = useState<number>(0);
 
+    const swiperRef = useRef<SwiperRef>(null);
+    const swiperApi = swiperRef.current?.swiper;
+
     useEffect(()=>{
         switch(card){
             case 'React' :
@@ -48,6 +51,7 @@ export const Slide =({card, setCard, setModal, setProjectModal}:props)=> {
     return (
         <C.Container>
             <Swiper
+                ref={swiperRef}
                 effect={'coverflow'}
                 centeredSlides={true}
                 slidesPerView={'auto'}
