@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div<{bg:string}>`
+export const Container = styled.div<{bg:string,changeMobile:boolean}>`
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -8,8 +8,12 @@ export const Container = styled.div<{bg:string}>`
     background-color: ${props=> props.bg};
     padding:0 20px ;
 
+
     @media(max-width:1000px){
         padding:0 10px;
+        position: relative;
+        overflow-y: hidden;
+        height: ${props=> props.changeMobile ? '100vh':'auto'}
     }
   
 `

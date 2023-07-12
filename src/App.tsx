@@ -10,7 +10,7 @@ const App = ()=>{
   const [changeMobile,setChangeMobile] = useState(false)
   
   return(
-    <C.Container bg={state.theme.bg}>
+    <C.Container bg={state.theme.bg}  changeMobile={changeMobile}>
       <MenuMobile
         changeMobile = {changeMobile}
         setChangeMobile ={setChangeMobile}

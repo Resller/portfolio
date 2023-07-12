@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
     flex:1;
     display:flex;
+
+    @media(max-width:850px){
+        overflow: hidden;
+        height:100vh;
+    }
 `
 export const AreaContainer = styled.div`
     flex:1;

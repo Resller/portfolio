@@ -28,6 +28,8 @@ export const Container = styled.div < {bg:string, modal:boolean} >`
 
     @media(max-width:850px){
         flex-direction: column;
+        border-radius: 0px;
+        padding-top:20px;
     }
     @media(max-width:550px){
         width:100%;
@@ -52,6 +54,10 @@ export const AreaInfo = styled.div`
     max-width:500px;
     display: flex;
     flex-direction: column;
+
+    @media(max-width:850px){
+        max-width:100%
+    }
 
     @media(max-width:550px){
         padding-top: 20px;
@@ -80,6 +86,10 @@ export const Description = styled.p <{ colorTextSecondary:string}>`
     line-height: 26px;
     opacity: 0.9;
     max-width:450px;
+    @media(max-width:850px){
+        max-width:100%
+    }
+  
     
     @media(max-width:550px){
         font-size: 14px;

@@ -37,9 +37,7 @@ export const AreaBar = styled.div`
 export const AreaModal = styled.div <{modal:boolean}>`
     content: "";
     z-index: 9999;
-    position:fixed;
-    width: 100%;
-    height: 100%;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -51,7 +49,12 @@ export const AreaModal = styled.div <{modal:boolean}>`
     align-items: center;
     transition: opacity 0.3s ease;
 
-  opacity: ${(props) => (props.modal ? 1 : 0)};
-  pointer-events: ${(props) => (props.modal ? 'auto' : 'none')};
+    opacity: ${(props) => (props.modal ? 1 : 0)};
+    pointer-events: ${(props) => (props.modal ? 'auto' : 'none')};
+
+    @media(max-width:850px){
+        display: block;
+    }
+
 
 `

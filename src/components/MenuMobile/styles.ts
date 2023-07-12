@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div <{changeMobile:boolean}>`
     content: "";
     z-index: 9999;
-    position: ${props=> props.changeMobile ? 'fixed':'inherit'};
+    position: ${props=> props.changeMobile ? ' absolute':'inherit'};
     width: 100%;
     height: 100%;
     top: 0;
@@ -12,12 +12,12 @@ export const Container = styled.div <{changeMobile:boolean}>`
     right: 0;
     background-color: rgba(0, 0, 0, 0.8);
     transition: opacity 0.5s ease-out;
-    overflow-y: auto;
+    overflow-y: hidden;
 `
 export const AreaMenu = styled.div<{ bgGradientPrimary:string,bgGradientSecondary:string,changeMobile:boolean}>`
     padding: 25px 40px;
     width: 350px;
-    z-index: 999;
+    z-index: 9999;
     position: absolute;
     background: linear-gradient(145deg,${props=>props.bgGradientPrimary},${props=>props.bgGradientSecondary});
     min-height: 100vh;
@@ -26,6 +26,8 @@ export const AreaMenu = styled.div<{ bgGradientPrimary:string,bgGradientSecondar
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
     margin-left: ${props=> props.changeMobile ? '0':'-390'}px;
     transition: all 0.5s ease-out;
+    overflow-y: auto;
+    height: 100vh;
 
     @media(max-width:350px){
         width:100%;
