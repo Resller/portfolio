@@ -12,7 +12,7 @@ type propsCard = {
 export const Container = styled.div`
     width:100%;
     padding-top:30px;
-   
+    padding-bottom: 30px;
     .swiper-slide {
         background-position: center;
         background-size: cover;

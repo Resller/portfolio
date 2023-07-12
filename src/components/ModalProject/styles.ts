@@ -18,10 +18,9 @@ export const Container = styled.div < {bg:string, modal:boolean} >`
     position: relative;
     padding: 30px;
     border-radius: 10px;
-    overflow: hidden;
     border: none;
     transition: opacity 0.3s ease;
-
+    
     opacity: ${(props) => (props.modal ? 1 : 0)};
     pointer-events: ${(props) => (props.modal ? 'auto' : 'none')};
    
