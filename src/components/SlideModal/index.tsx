@@ -4,7 +4,7 @@ import { useContext, useRef} from 'react';
 import { Context } from '../../context/Context';
 
 import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
-import {EffectCreative ,Pagination, Autoplay} from 'swiper/modules';
+import {EffectCreative ,Pagination, Autoplay} from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/effect-creative';

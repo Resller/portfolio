@@ -4,8 +4,8 @@ import { useContext, useState,  useEffect, useRef} from 'react';
 import { Context } from '../../context/Context';
 
 import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
-import { EffectCoverflow ,Pagination, Navigation} from 'swiper/modules';
 
+import {EffectCoverflow, Pagination, Navigation } from 'swiper'
 import {FaArrowCircleRight, FaArrowCircleLeft , FaArrowUp } from "react-icons/fa";
 
 import 'swiper/css';
