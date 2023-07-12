@@ -229,5 +229,9 @@ export const ButtonClose = styled.div<{ bgGradientPrimary:string,bgGradientSecon
     position: absolute;
     top: 6px;
     right: 12px;
+    
+    @media(max-width:850px){
+        top: 12px;
+    }
 
 `

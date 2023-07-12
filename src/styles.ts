@@ -12,7 +12,7 @@ export const Container = styled.div<{bg:string,changeMobile:boolean}>`
     @media(max-width:1000px){
         padding:0 10px;
         position: relative;
-        overflow-y: hidden;
+        overflow-y:${props=> props.changeMobile ? 'hidden;':'initial'} 
         height: ${props=> props.changeMobile ? '100vh':'auto'}
     }
   

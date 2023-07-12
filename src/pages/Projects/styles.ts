@@ -54,7 +54,7 @@ export const AreaModal = styled.div <{modal:boolean}>`
 
     @media(max-width:850px){
         display: block;
-        overflow-y: auto;
+     
     }
 
 
